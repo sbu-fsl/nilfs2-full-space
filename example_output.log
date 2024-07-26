@@ -1,0 +1,371 @@
+umount: /mnt/test-nilfs2-i0: no mount point specified.
+rmmod: ERROR: Module brd is not currently loaded
+mkfs.nilfs2 (nilfs-utils 2.2.8)
+Start writing file system initial data to the device
+       Blocksize:4096  Device:/dev/ram0  Device Size:1052672
+File system initialization succeeded !! 
+
+Initial disk usage:
+Filesystem     1K-blocks  Used Available Use% Mounted on
+/dev/ram0           1020   124       384  25% /mnt/test-nilfs2-i0
+Filesystem      Size  Used Avail Use% Mounted on
+/dev/ram0      1020K  124K  384K  25% /mnt/test-nilfs2-i0
+Filesystem       Inodes IUsed    IFree IUse% Mounted on
+/dev/ram0      33554432     2 33554430    1% /mnt/test-nilfs2-i0
+           SEGNUM        DATE     TIME STAT     NBLOCKS       NLIVEBLOCKS
+                0  2024-07-25 14:50:34 ad-p          11         11 (100%)
+                1  ---------- --:--:-- ad-p           0          0 (100%)
+                2  ---------- --:--:-- ----           0          0 (  0%)
+                3  ---------- --:--:-- ----           0          0 (  0%)
+                4  ---------- --:--:-- ----           0          0 (  0%)
+                5  ---------- --:--:-- ----           0          0 (  0%)
+                6  ---------- --:--:-- ----           0          0 (  0%)
+                7  ---------- --:--:-- ----           0          0 (  0%)
+                8  ---------- --:--:-- ----           0          0 (  0%)
+                9  ---------- --:--:-- ----           0          0 (  0%)
+               10  ---------- --:--:-- ----           0          0 (  0%)
+               11  ---------- --:--:-- ----           0          0 (  0%)
+               12  ---------- --:--:-- ----           0          0 (  0%)
+               13  ---------- --:--:-- ----           0          0 (  0%)
+               14  ---------- --:--:-- ----           0          0 (  0%)
+               15  ---------- --:--:-- ----           0          0 (  0%)
+
+
+Creating files until the system is full.
+dd: error writing '/mnt/test-nilfs2-i0/testfile_79': No space left on device
+Failed to create file /mnt/test-nilfs2-i0/testfile_79. Stopping.
+
+Created 78 files
+
+
+Disk usage after filling:
+Filesystem     1K-blocks  Used Available Use% Mounted on
+/dev/ram0           1020   572         0 100% /mnt/test-nilfs2-i0
+Filesystem      Size  Used Avail Use% Mounted on
+/dev/ram0      1020K  572K     0 100% /mnt/test-nilfs2-i0
+Filesystem       Inodes IUsed    IFree IUse% Mounted on
+/dev/ram0      33554432    81 33554351    1% /mnt/test-nilfs2-i0
+           SEGNUM        DATE     TIME STAT     NBLOCKS       NLIVEBLOCKS
+                0  2024-07-25 14:50:39 -d-p          15         15 (100%)
+                1  2024-07-25 14:50:39 -d-p          16         16 (100%)
+                2  2024-07-25 14:50:39 -d-p          16         16 (100%)
+                3  2024-07-25 14:50:39 -d-p          16         16 (100%)
+                4  2024-07-25 14:50:39 -d-p          16         16 (100%)
+                5  2024-07-25 14:50:39 -d-p          16         16 (100%)
+                6  2024-07-25 14:50:39 -d-p          16         16 (100%)
+                7  2024-07-25 14:50:39 ad-p           7          7 (100%)
+                8  ---------- --:--:-- ad-p           0          0 (100%)
+                9  ---------- --:--:-- ----           0          0 (  0%)
+               10  ---------- --:--:-- ----           0          0 (  0%)
+               11  ---------- --:--:-- ----           0          0 (  0%)
+               12  ---------- --:--:-- ----           0          0 (  0%)
+               13  ---------- --:--:-- ----           0          0 (  0%)
+               14  ---------- --:--:-- ----           0          0 (  0%)
+               15  ---------- --:--:-- ----           0          0 (  0%)
+
+
+Deleting all files created
+
+Deleted 80 files
+
+Disk usage after deleting:
+Filesystem     1K-blocks  Used Available Use% Mounted on
+/dev/ram0           1020   252       256  50% /mnt/test-nilfs2-i0
+Filesystem      Size  Used Avail Use% Mounted on
+/dev/ram0      1020K  252K  256K  50% /mnt/test-nilfs2-i0
+Filesystem       Inodes IUsed    IFree IUse% Mounted on
+/dev/ram0      33554432     2 33554430    1% /mnt/test-nilfs2-i0
+           SEGNUM        DATE     TIME STAT     NBLOCKS       NLIVEBLOCKS
+                0  ---------- --:--:-- ----           0          0 (  0%)
+                1  ---------- --:--:-- ----           0          0 (  0%)
+                2  ---------- --:--:-- ----           0          0 (  0%)
+                3  ---------- --:--:-- ----           0          0 (  0%)
+                4  ---------- --:--:-- ----           0          0 (  0%)
+                5  ---------- --:--:-- ----           0          0 (  0%)
+                6  ---------- --:--:-- ----           0          0 (  0%)
+                7  2024-07-25 14:50:54 -d--          16          6 ( 43%)
+                8  2024-07-25 14:51:04 -d-p          16         16 (100%)
+                9  2024-07-25 14:51:05 ad-p          14         14 (100%)
+               10  ---------- --:--:-- ad-p           0          0 (100%)
+               11  ---------- --:--:-- ----           0          0 (  0%)
+               12  ---------- --:--:-- ----           0          0 (  0%)
+               13  ---------- --:--:-- ----           0          0 (  0%)
+               14  ---------- --:--:-- ----           0          0 (  0%)
+               15  ---------- --:--:-- ----           0          0 (  0%)
+
+
+Creating files until the system is full.
+dd: error writing '/mnt/test-nilfs2-i0/testfile_47': No space left on device
+Failed to create file /mnt/test-nilfs2-i0/testfile_47. Stopping.
+
+Created 46 files
+
+
+Disk usage after filling:
+Filesystem     1K-blocks  Used Available Use% Mounted on
+/dev/ram0           1020   508         0 100% /mnt/test-nilfs2-i0
+Filesystem      Size  Used Avail Use% Mounted on
+/dev/ram0      1020K  508K     0 100% /mnt/test-nilfs2-i0
+Filesystem       Inodes IUsed    IFree IUse% Mounted on
+/dev/ram0      33554432    49 33554383    1% /mnt/test-nilfs2-i0
+           SEGNUM        DATE     TIME STAT     NBLOCKS       NLIVEBLOCKS
+                0  ---------- --:--:-- ad-p           0          0 (100%)
+                1  ---------- --:--:-- ----           0          0 (  0%)
+                2  ---------- --:--:-- ----           0          0 (  0%)
+                3  ---------- --:--:-- ----           0          0 (  0%)
+                4  ---------- --:--:-- ----           0          0 (  0%)
+                5  ---------- --:--:-- ----           0          0 (  0%)
+                6  ---------- --:--:-- ----           0          0 (  0%)
+                7  ---------- --:--:-- ----           0          0 (  0%)
+                8  ---------- --:--:-- ----           0          0 (  0%)
+                9  2024-07-25 14:51:55 -d--          16          1 ( 12%)
+               10  2024-07-25 14:51:55 -d--          16         15 ( 99%)
+               11  2024-07-25 14:51:55 -d--          16         15 ( 99%)
+               12  2024-07-25 14:51:55 -d--          16         15 ( 99%)
+               13  2024-07-25 14:51:55 -d--          16         10 ( 68%)
+               14  2024-07-25 14:51:56 -d-p          16         16 (100%)
+               15  2024-07-25 14:51:57 ad-p           8          8 (100%)
+
+
+Deleting all files created
+
+Deleted 48 files
+
+Disk usage after deleting:
+Filesystem     1K-blocks  Used Available Use% Mounted on
+/dev/ram0           1020   316       192  63% /mnt/test-nilfs2-i0
+Filesystem      Size  Used Avail Use% Mounted on
+/dev/ram0      1020K  316K  192K  63% /mnt/test-nilfs2-i0
+Filesystem       Inodes IUsed    IFree IUse% Mounted on
+/dev/ram0      33554432     2 33554430    1% /mnt/test-nilfs2-i0
+           SEGNUM        DATE     TIME STAT     NBLOCKS       NLIVEBLOCKS
+                0  2024-07-25 14:52:18 -d--          15          0 (  6%)
+                1  2024-07-25 14:52:18 -d-p          15         15 (100%)
+                2  2024-07-25 14:52:24 ad-p          10         10 (100%)
+                3  ---------- --:--:-- ad-p           0          0 (100%)
+                4  ---------- --:--:-- ----           0          0 (  0%)
+                5  ---------- --:--:-- ----           0          0 (  0%)
+                6  ---------- --:--:-- ----           0          0 (  0%)
+                7  ---------- --:--:-- ----           0          0 (  0%)
+                8  ---------- --:--:-- ----           0          0 (  0%)
+                9  ---------- --:--:-- ----           0          0 (  0%)
+               10  ---------- --:--:-- ----           0          0 (  0%)
+               11  ---------- --:--:-- ----           0          0 (  0%)
+               12  ---------- --:--:-- ----           0          0 (  0%)
+               13  ---------- --:--:-- ----           0          0 (  0%)
+               14  ---------- --:--:-- ----           0          0 (  0%)
+               15  2024-07-25 14:52:10 -d--          16          5 ( 37%)
+
+
+Creating files until the system is full.
+dd: error writing '/mnt/test-nilfs2-i0/testfile_31': No space left on device
+Failed to create file /mnt/test-nilfs2-i0/testfile_31. Stopping.
+
+Created 30 files
+
+
+Disk usage after filling:
+Filesystem     1K-blocks  Used Available Use% Mounted on
+/dev/ram0           1020   444        64  88% /mnt/test-nilfs2-i0
+Filesystem      Size  Used Avail Use% Mounted on
+/dev/ram0      1020K  444K   64K  88% /mnt/test-nilfs2-i0
+Filesystem       Inodes IUsed    IFree IUse% Mounted on
+/dev/ram0      33554432    33 33554399    1% /mnt/test-nilfs2-i0
+           SEGNUM        DATE     TIME STAT     NBLOCKS       NLIVEBLOCKS
+                0  ---------- --:--:-- ----           0          0 (  0%)
+                1  2024-07-25 14:52:18 -d--          15          0 (  6%)
+                2  2024-07-25 14:53:10 -d--          16          6 ( 43%)
+                3  2024-07-25 14:53:10 -d--          16         15 ( 99%)
+                4  2024-07-25 14:53:10 -d--          16         15 ( 99%)
+                5  2024-07-25 14:53:10 -d--          16          8 ( 56%)
+                6  2024-07-25 14:53:19 ad-p           8          8 (100%)
+                7  ---------- --:--:-- ad-p           0          0 (100%)
+                8  ---------- --:--:-- ----           0          0 (  0%)
+                9  ---------- --:--:-- ----           0          0 (  0%)
+               10  ---------- --:--:-- ----           0          0 (  0%)
+               11  ---------- --:--:-- ----           0          0 (  0%)
+               12  ---------- --:--:-- ----           0          0 (  0%)
+               13  ---------- --:--:-- ----           0          0 (  0%)
+               14  ---------- --:--:-- ----           0          0 (  0%)
+               15  ---------- --:--:-- ----           0          0 (  0%)
+
+
+Deleting all files created
+
+Deleted 32 files
+
+Disk usage after deleting:
+Filesystem     1K-blocks  Used Available Use% Mounted on
+/dev/ram0           1020   444        64  88% /mnt/test-nilfs2-i0
+Filesystem      Size  Used Avail Use% Mounted on
+/dev/ram0      1020K  444K   64K  88% /mnt/test-nilfs2-i0
+Filesystem       Inodes IUsed    IFree IUse% Mounted on
+/dev/ram0      33554432     2 33554430    1% /mnt/test-nilfs2-i0
+           SEGNUM        DATE     TIME STAT     NBLOCKS       NLIVEBLOCKS
+                0  ---------- --:--:-- ----           0          0 (  0%)
+                1  ---------- --:--:-- ----           0          0 (  0%)
+                2  2024-07-25 14:53:10 -d--          16          1 ( 12%)
+                3  2024-07-25 14:53:10 -d--          16          0 (  6%)
+                4  2024-07-25 14:53:10 -d--          16          0 (  6%)
+                5  2024-07-25 14:53:10 -d--          16          0 (  6%)
+                6  2024-07-25 14:53:20 -d-p          16         16 (100%)
+                7  2024-07-25 14:53:20 ad-p          13         13 (100%)
+                8  ---------- --:--:-- ad-p           0          0 (100%)
+                9  ---------- --:--:-- ----           0          0 (  0%)
+               10  ---------- --:--:-- ----           0          0 (  0%)
+               11  ---------- --:--:-- ----           0          0 (  0%)
+               12  ---------- --:--:-- ----           0          0 (  0%)
+               13  ---------- --:--:-- ----           0          0 (  0%)
+               14  ---------- --:--:-- ----           0          0 (  0%)
+               15  ---------- --:--:-- ----           0          0 (  0%)
+
+
+Creating files until the system is full.
+dd: failed to open '/mnt/test-nilfs2-i0/testfile_1': No space left on device
+Failed to create file /mnt/test-nilfs2-i0/testfile_1. Stopping.
+
+Created 0 files
+
+
+Disk usage after filling:
+Filesystem     1K-blocks  Used Available Use% Mounted on
+/dev/ram0           1020   444        64  88% /mnt/test-nilfs2-i0
+Filesystem      Size  Used Avail Use% Mounted on
+/dev/ram0      1020K  444K   64K  88% /mnt/test-nilfs2-i0
+Filesystem       Inodes IUsed    IFree IUse% Mounted on
+/dev/ram0      33554432     2 33554430    1% /mnt/test-nilfs2-i0
+           SEGNUM        DATE     TIME STAT     NBLOCKS       NLIVEBLOCKS
+                0  ---------- --:--:-- ----           0          0 (  0%)
+                1  ---------- --:--:-- ----           0          0 (  0%)
+                2  2024-07-25 14:53:10 -d--          16          1 ( 12%)
+                3  2024-07-25 14:53:10 -d--          16          0 (  6%)
+                4  2024-07-25 14:53:10 -d--          16          0 (  6%)
+                5  2024-07-25 14:53:10 -d--          16          0 (  6%)
+                6  2024-07-25 14:53:20 -d-p          16         16 (100%)
+                7  2024-07-25 14:53:20 ad-p          13         13 (100%)
+                8  ---------- --:--:-- ad-p           0          0 (100%)
+                9  ---------- --:--:-- ----           0          0 (  0%)
+               10  ---------- --:--:-- ----           0          0 (  0%)
+               11  ---------- --:--:-- ----           0          0 (  0%)
+               12  ---------- --:--:-- ----           0          0 (  0%)
+               13  ---------- --:--:-- ----           0          0 (  0%)
+               14  ---------- --:--:-- ----           0          0 (  0%)
+               15  ---------- --:--:-- ----           0          0 (  0%)
+
+
+Deleting all files created
+
+Deleted 1 files
+
+Disk usage after deleting:
+Filesystem     1K-blocks  Used Available Use% Mounted on
+/dev/ram0           1020   444        64  88% /mnt/test-nilfs2-i0
+Filesystem      Size  Used Avail Use% Mounted on
+/dev/ram0      1020K  444K   64K  88% /mnt/test-nilfs2-i0
+Filesystem       Inodes IUsed    IFree IUse% Mounted on
+/dev/ram0      33554432     2 33554430    1% /mnt/test-nilfs2-i0
+           SEGNUM        DATE     TIME STAT     NBLOCKS       NLIVEBLOCKS
+                0  ---------- --:--:-- ----           0          0 (  0%)
+                1  ---------- --:--:-- ----           0          0 (  0%)
+                2  2024-07-25 14:53:10 -d--          16          1 ( 12%)
+                3  2024-07-25 14:53:10 -d--          16          0 (  6%)
+                4  2024-07-25 14:53:10 -d--          16          0 (  6%)
+                5  2024-07-25 14:53:10 -d--          16          0 (  6%)
+                6  2024-07-25 14:53:20 -d-p          16         16 (100%)
+                7  2024-07-25 14:53:20 ad-p          13         13 (100%)
+                8  ---------- --:--:-- ad-p           0          0 (100%)
+                9  ---------- --:--:-- ----           0          0 (  0%)
+               10  ---------- --:--:-- ----           0          0 (  0%)
+               11  ---------- --:--:-- ----           0          0 (  0%)
+               12  ---------- --:--:-- ----           0          0 (  0%)
+               13  ---------- --:--:-- ----           0          0 (  0%)
+               14  ---------- --:--:-- ----           0          0 (  0%)
+               15  ---------- --:--:-- ----           0          0 (  0%)
+
+
+Creating files until the system is full.
+dd: failed to open '/mnt/test-nilfs2-i0/testfile_1': No space left on device
+Failed to create file /mnt/test-nilfs2-i0/testfile_1. Stopping.
+
+Created 0 files
+
+
+Disk usage after filling:
+Filesystem     1K-blocks  Used Available Use% Mounted on
+/dev/ram0           1020   444        64  88% /mnt/test-nilfs2-i0
+Filesystem      Size  Used Avail Use% Mounted on
+/dev/ram0      1020K  444K   64K  88% /mnt/test-nilfs2-i0
+Filesystem       Inodes IUsed    IFree IUse% Mounted on
+/dev/ram0      33554432     2 33554430    1% /mnt/test-nilfs2-i0
+           SEGNUM        DATE     TIME STAT     NBLOCKS       NLIVEBLOCKS
+                0  ---------- --:--:-- ----           0          0 (  0%)
+                1  ---------- --:--:-- ----           0          0 (  0%)
+                2  2024-07-25 14:53:10 -d--          16          1 ( 12%)
+                3  2024-07-25 14:53:10 -d--          16          0 (  6%)
+                4  2024-07-25 14:53:10 -d--          16          0 (  6%)
+                5  2024-07-25 14:53:10 -d--          16          0 (  6%)
+                6  2024-07-25 14:53:20 -d-p          16         16 (100%)
+                7  2024-07-25 14:53:20 ad-p          13         13 (100%)
+                8  ---------- --:--:-- ad-p           0          0 (100%)
+                9  ---------- --:--:-- ----           0          0 (  0%)
+               10  ---------- --:--:-- ----           0          0 (  0%)
+               11  ---------- --:--:-- ----           0          0 (  0%)
+               12  ---------- --:--:-- ----           0          0 (  0%)
+               13  ---------- --:--:-- ----           0          0 (  0%)
+               14  ---------- --:--:-- ----           0          0 (  0%)
+               15  ---------- --:--:-- ----           0          0 (  0%)
+
+
+Deleting all files created
+
+Deleted 1 files
+
+Disk usage after deleting:
+Filesystem     1K-blocks  Used Available Use% Mounted on
+/dev/ram0           1020   444        64  88% /mnt/test-nilfs2-i0
+Filesystem      Size  Used Avail Use% Mounted on
+/dev/ram0      1020K  444K   64K  88% /mnt/test-nilfs2-i0
+Filesystem       Inodes IUsed    IFree IUse% Mounted on
+/dev/ram0      33554432     2 33554430    1% /mnt/test-nilfs2-i0
+           SEGNUM        DATE     TIME STAT     NBLOCKS       NLIVEBLOCKS
+                0  ---------- --:--:-- ----           0          0 (  0%)
+                1  ---------- --:--:-- ----           0          0 (  0%)
+                2  2024-07-25 14:53:10 -d--          16          1 ( 12%)
+                3  2024-07-25 14:53:10 -d--          16          0 (  6%)
+                4  2024-07-25 14:53:10 -d--          16          0 (  6%)
+                5  2024-07-25 14:53:10 -d--          16          0 (  6%)
+                6  2024-07-25 14:53:20 -d-p          16         16 (100%)
+                7  2024-07-25 14:53:20 ad-p          13         13 (100%)
+                8  ---------- --:--:-- ad-p           0          0 (100%)
+                9  ---------- --:--:-- ----           0          0 (  0%)
+               10  ---------- --:--:-- ----           0          0 (  0%)
+               11  ---------- --:--:-- ----           0          0 (  0%)
+               12  ---------- --:--:-- ----           0          0 (  0%)
+               13  ---------- --:--:-- ----           0          0 (  0%)
+               14  ---------- --:--:-- ----           0          0 (  0%)
+               15  ---------- --:--:-- ----           0          0 (  0%)
+NILFS_CLEANERD_PID=18841
+Disk usage after manually running cleanerd
+Filesystem     1K-blocks  Used Available Use% Mounted on
+/dev/ram0           1020   444        64  88% /mnt/test-nilfs2-i0
+Filesystem      Size  Used Avail Use% Mounted on
+/dev/ram0      1020K  444K   64K  88% /mnt/test-nilfs2-i0
+Filesystem       Inodes IUsed    IFree IUse% Mounted on
+/dev/ram0      33554432     2 33554430    1% /mnt/test-nilfs2-i0
+           SEGNUM        DATE     TIME STAT     NBLOCKS       NLIVEBLOCKS
+                0  ---------- --:--:-- ----           0          0 (  0%)
+                1  ---------- --:--:-- ----           0          0 (  0%)
+                2  2024-07-25 14:53:10 -d--          16          1 ( 12%)
+                3  2024-07-25 14:53:10 -d--          16          0 (  6%)
+                4  2024-07-25 14:53:10 -d--          16          0 (  6%)
+                5  2024-07-25 14:53:10 -d--          16          0 (  6%)
+                6  2024-07-25 14:53:20 -d-p          16         16 (100%)
+                7  2024-07-25 14:53:20 ad-p          13         13 (100%)
+                8  ---------- --:--:-- ad-p           0          0 (100%)
+                9  ---------- --:--:-- ----           0          0 (  0%)
+               10  ---------- --:--:-- ----           0          0 (  0%)
+               11  ---------- --:--:-- ----           0          0 (  0%)
+               12  ---------- --:--:-- ----           0          0 (  0%)
+               13  ---------- --:--:-- ----           0          0 (  0%)
+               14  ---------- --:--:-- ----           0          0 (  0%)
+               15  ---------- --:--:-- ----           0          0 (  0%)
