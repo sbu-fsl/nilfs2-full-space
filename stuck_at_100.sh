@@ -9,8 +9,11 @@ PROTECTION_PERIOD="10"
 
 # constants
 CONFIG_FILE="/etc/nilfs_cleanerd.conf"
-MOUNT_POINT="/mnt/test-nilfs2-i0"
+MOUNT_POINT="/mnt/test-nilfs2"
 DEVICE="/dev/ram0"
+DEVSZKB=1028
+BLK_PER_SEG=16
+
 FILE_PREFIX="testfile"
 DIR_PREFIX="testdir"
 FILE_SIZE=4
@@ -74,7 +77,7 @@ create_and_delete() {
 
 ## Initial setup 
 
-# Update protection_period
+# Update protection_period based on PROTECTION_PERIOD
 if grep -q "^${SETTING}[[:space:]]*" "$CONFIG_FILE"; then
     sed -i "s|^\(${SETTING}[[:space:]]*\).*|\1${PROTECTION_PERIOD}|" "$CONFIG_FILE"
 else
@@ -85,9 +88,9 @@ umount "${MOUNT_POINT}"
 rm -rf "${MOUNT_POINT}"
 rmmod brd
 mkdir "${MOUNT_POINT}"
-modprobe brd rd_nr=1 rd_size=1028
-mkfs.nilfs2 -B 16 -f "${DEVICE}"
-mount "${DEVICE}" "${MOUNT_POINT}"
+modprobe brd rd_nr=1 rd_size=$DEVSZKB
+mkfs.nilfs2 -B $BLK_PER_SEG -f "${DEVICE}"
+mount -t nilfs2 -o nogc "${DEVICE}" "${MOUNT_POINT}"
 
 
 ## Disk usage after initialization
@@ -105,6 +108,7 @@ create_and_delete
 create_and_delete
 
 ## Manually run cleanerd
+## Don't manually start cleanerd unless the mount specifies nogc
 nilfs_cleanerd -p 1 "${DEVICE}" "${MOUNT_POINT}"
 
 sleep 60
@@ -113,5 +117,3 @@ df "${MOUNT_POINT}"
 df -h "${MOUNT_POINT}"
 df -i "${MOUNT_POINT}"
 lssu -a -l "${DEVICE}"
-
-
